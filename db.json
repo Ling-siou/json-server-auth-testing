@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$fXiR7AikjLxt7CwL.hvf3uSvAlNN0QH0nErehlxYjyveqyXT7Ij52",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "constent": "test new a post by user1",
+      "userId": "1",
+      "id": 1
+    }
+  ]
+}
