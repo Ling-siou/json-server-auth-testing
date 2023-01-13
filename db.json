@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$fXiR7AikjLxt7CwL.hvf3uSvAlNN0QH0nErehlxYjyveqyXT7Ij52",
+      "email": "admin@mail.com",
+      "password": "$2a$10$7HaYGk4wehq3VcgIoAuLnuhBAgivtwHdTSBkunf09clGBky4wX1R.",
       "id": 1
     }
   ],
@@ -11,6 +11,11 @@
       "constent": "test new a post by user1",
       "userId": "1",
       "id": 1
+    },
+    {
+      "constent": "Pls QQ",
+      "userId": "1",
+      "id": 2
     }
   ]
 }
