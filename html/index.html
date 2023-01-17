@@ -193,7 +193,7 @@
                         </div>
                     </td>
                     <td>
-                        <div v-if="editId">
+                        <div v-if="editId == view.id">
                             <button type="button" class="btn btn-info mb-2" @click="saveEdit()">儲存</button>
                             <button type="button" class="btn btn-info" @click="editEmpty()">取消</button>
                         </div>
