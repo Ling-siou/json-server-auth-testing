@@ -2,20 +2,96 @@
   "users": [
     {
       "email": "admin@mail.com",
-      "password": "$2a$10$7HaYGk4wehq3VcgIoAuLnuhBAgivtwHdTSBkunf09clGBky4wX1R.",
-      "id": 1
+      "password": "$2a$10$WrFDXfQg6tOzwCS5rHmOtO7szNt0bM4pCtWIFYC7/2TjVQp5loAaq",
+      "id": 1,
+      "name": "管理員",
+      "likePost": [
+        "1",
+        "3"
+      ],
+      "userMode": [
+        "admin",
+        "user"
+      ]
+    },
+    {
+      "email": "cc@mail.com",
+      "password": "$2a$10$B7jDNeWcSw0SYqvbJdsDOe9gCUiAvP5gaGdS1MzvuZEa.rZOLsoAO",
+      "userName": "小陳",
+      "likePost": [],
+      "userMode": [
+        "user"
+      ],
+      "id": 2
+    },
+    {
+      "email": "dd@mail.com",
+      "password": "$2a$10$vRM3YD8e4z2szWKmtLLp2OqQHHflxWxSH9rIAi/7bBstZoap9NF4.",
+      "name": "老王",
+      "likePost": [],
+      "userMode": [
+        "user"
+      ],
+      "id": 3
+    },
+    {
+      "email": "aa@mail.com",
+      "password": "$2a$10$VHHP1K0T8zvXmr3NgT/ozeeG4DvcuyG7ufpSpAZE4Cgv/A3aFUCLW",
+      "name": "AA",
+      "id": 4
+    },
+    {
+      "email": "bb@mail.com",
+      "password": "$2a$10$nWI.yFMhm4Q9VZ3bI5dXkuKo2kUKNp.L5zLTu7M13hDpNkPJ55w3S",
+      "name": "BB",
+      "id": 5
+    },
+    {
+      "email": "ff@mail.com",
+      "password": "$2a$10$eRMCBwEIT2q9WAz5sr8Hyuicsd6X4JttnYXDke3E.jJrWXrev92t.",
+      "name": "FF",
+      "likePost": [
+        "2",
+        "3"
+      ],
+      "userMode": [
+        "user"
+      ],
+      "id": 6
     }
   ],
   "posts": [
     {
-      "constent": "test new a post by user1",
+      "title": "銀座",
+      "subtitle": "新舊交融的雅致街區",
+      "constent": "銀座建於江戶時代（1603～1868年）的銀幣鑄造所遺址，擁有其他街區感受不到的雅致氛圍及歷史風情。主要街道的「銀座通」上林立著老字號百貨公司，其優質服務及店內販售的高級商品相得益彰，如今仍吸引許多人潮前來購物。而在銀座的巷弄內，您不僅可以到時裝店享受購物樂趣，也有機會意外邂逅規模雖小、料理卻堪稱美味逸品的小酒館。與時俱進的銀座不將就於既有的知名度，展現出富含文化底蘊的現代性與活力，以及昔日美好時代的魅力。",
+      "imgUrl": "https://images.unsplash.com/photo-1622767821843-789c9e0cad94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "userId": "1",
       "id": 1
     },
     {
-      "constent": "Pls QQ",
+      "title": "秋葉原",
+      "subtitle": "洋溢獨特文化氣息的熱鬧電器街",
+      "constent": "秋葉原於二戰後以黑市集中地起步，其後躍升為日本科技重鎮，目前販售各種電器與電子產品，並吸引眾多來自世界各地的顧客。近年來，這裡亦成為御宅族文化的發源地，各種遊戲與動漫的狂熱粉絲都紛紛造訪此地。此外，對於深愛流行偶像、角色扮演等日本次文化的人們而言，秋葉原更是必訪聖地。不妨前往秋葉原的街道散步，感受一下這裡特有的文化氣息吧。",
+      "imgUrl": "https://images.unsplash.com/photo-1580094573009-7a220cc896b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80",
       "userId": "1",
       "id": 2
+    },
+    {
+      "title": "東京車站・丸之內",
+      "subtitle": "所有旅客必經的中央車站",
+      "constent": "最近經過精心修復的東京站丸之內車站是東京最令人印象深刻的建築之一，其紅磚外牆與周邊以鋼筋水泥與玻璃帷幕建成的高樓大廈群呈現對比，頗具特色。東京主要交通樞紐的東京站同時也是新幹線的停靠站，由北至函館、南達福岡，縱橫貫穿日本全國。除了車站內提供的眾多購物及用餐選擇外，車站附近還有華美氣派的丸之內金融街、從江戶時代的商業中心一路發展至今的日本橋等，都是東京最出色的知名景點。",
+      "imgUrl": "https://images.unsplash.com/photo-1633097254841-d48447706118?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "title": "日本橋",
+      "subtitle": "融合東京昔日風情與現代首都面貌的街區",
+      "constent": "鄰近銀座與東京站的日本橋完美融合了昔日魅力與超現代建築，這裡於江戶時代（1603～1867年）作為商業中心而繁榮發展，成為縱橫貫通日本的五條主要街道之起點，至今亦仍為日本道路起始原點。其都市計畫也將傳統根基納入考量，相當注重寺廟、橋梁及歷史悠久的百貨公司與現代摩天大樓的相互融合。街道上不僅有老字號餐廳在保有江戶時代傳統風情之下，改建為現代風格空間來營業，同時也能看到華麗和服店，以及專門販售海帶、醬油、金箔或菜刀的商店。不妨在耀眼奪目的高樓大廈陰影中，尋找生生不息的東京傳統文化吧。",
+      "imgUrl": "https://images.unsplash.com/photo-1501769752-a59efa2298ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "userId": "1",
+      "id": 4
     }
   ]
 }
