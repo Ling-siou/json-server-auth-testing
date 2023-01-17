@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛七陶景點蒐集</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <style>
+        .card-img-size {
+            object-fit: cover;
+        }
+
+        .card:hover {
+            box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .1);
+            cursor: pointer;
+        }
+        .table .btn {
+            white-space:nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- header -->
+        <!-- 登入 標題 -->
+        <nav class="navbar bg-body-tertiary mb-4">
+            <div class="container-fluid container">
+                <a class="navbar-brand" href="#">景點通</a>
+                <button  v-if="!userId" type="button" class="btn btn-primary text-end" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        @click="modelOpen">
+                        登入
+                    </button>
+                <div v-else class="text-end d-flex align-items-center">
+                    <router-link v-if="userName" to="/" class="me-3">首頁</router-link>
+                    <router-link v-if="userModeList.includes('user')" to="/like" class="me-3">景點收藏</router-link>
+                    <router-link v-if="userModeList.includes('admin')" to="/manage" class="me-3">景點管理</router-link>
+                    <span v-if="userName" class="ms-3">hi! {{userName}}</span>
+                    <button type="button" class="btn text-nowrap" @click="logout">登出</button>
+                    <!-- Button trigger modal -->
+                    
+                </div>
+            </div>
+        </nav>
+        <!-- main -->
+        <!-- 首頁 -->
+        <home-template v-if="routeName === 'home'" :views="views" :user-id="userId" :user-like-id-list="userLikeIdList"
+            :toggle-like="toggleLike" :route-name="routeName"></home-template>
+        <!-- 收藏 -->
+        <home-template v-if="routeName === 'like'" :views="userLikeList" :user-id="userId"
+            :user-like-id-list="userLikeIdList" :toggle-like="toggleLike" :route-name="routeName"></home-template>
+        <!-- 管理 -->
+        <manage-list v-if="routeName === 'manage'" :views="views" :api-Url="apiUrl" :get-views="getViews"></manage-list>
+        <!-- 內頁 -->
+        <detialpage v-if="routeName === 'detial'" :user-like-id-list="userLikeIdList" :toggle-like="toggleLike"
+            :user-login="userId" :api-Url="apiUrl"></detialpage>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                ref="Close"></button>
+                        </div>
+                        <h5 class="modal-title fs-5 text-center mb-3" id="exampleModalLabel">{{formModeLogin ? '登入' : '歡迎註冊'}}</h5>
+                        <form v-if="formModeLogin">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" v-model="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    v-model="password">
+                            </div>
+                        </form>
+                        <form v-else>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail2" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail2"
+                                    aria-describedby="emailHelp" v-model="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputName2" class="form-label">大名</label>
+                                <input type="email" class="form-control" id="exampleInpuName2" v-model="newUserName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword2" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    v-model="password">
+                            </div>
+                        </form>
+                        <p v-if="loginErr" class="text-center text-danger">{{loginErr}}</p>
+                        <div  v-if="formModeLogin" class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-light me-2" @click="formModeLogin = false" >我要註冊</button>
+                            <button type="button" class="btn btn-primary" @click="login()">登入</button>
+                        </div>
+                        <div  v-else class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-light me-2" @click="formModeLogin = true" >我要登入</button>
+                            <button type="button" class="btn btn-primary" @click="login()">註冊</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/x-template" id="view-card">
+        <!-- 卡片模組 -->
+        <div class="card ">
+                <img :src="data.imgUrl || 'https://plus.unsplash.com/premium_photo-1661670468082-a2c8c28122d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'" class="card-img-top card-img-size" :alt="data.title" height="160">
+            <div class="card-body">
+                <h5 class="card-title">{{data.title}}</h5>
+                <p class="card-text">{{data.subtitle}}</p>
+                <div v-if="userLogin" class="text-end">
+                    <button v-if="userLike" type="button" class="btn" @click.stop="toggleLike(data.id)">移除收藏</button>
+                    <button v-else type="button" class="btn btn-primary" @click.stop="toggleLike(data.id)">加入收藏</button>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/x-template" id="home">
+        <div class="container m-auto row">
+            <h3>{{routeName === 'home' ? '首頁' : '景點收藏'}}</h3>
+            <div v-for="view in views" :key="view.id" class="col-md-4 col-6 mb-4">
+                <cards-template :data="view" :user-login="userId" :user-like="userLikeIdList.includes(view.id.toString())"  @click.stop="goRoute(view.id)" :toggle-like="toggleLike"></cards-template>
+            </div>
+        </div>
+    </script>
+    <script type="text/x-template" id="detialpage">
+        <div class="container">
+            <h1>{{view.title}}</h1>
+            <div v-if="userLogin">
+                <button v-if="userLikeIdList.includes(viewId.toString())" type="button" class="btn" @click.stop="toggleLike(viewId)">移除收藏</button>
+                <button v-else type="button" class="btn btn-primary" @click.stop="toggleLike(viewId)">加入收藏</button>
+            </div>
+            <h3>{{view.subtitle}}</h3>
+            <p>{{view.constent}}</p>
+            <img v-if="view.imgUrl" :src="view.imgUrl" width="200" :alt="view.title">
+            <p v-else>(無圖片)</p>
+            <br><br>
+            <router-link to="/" class="me-3">回首頁</router-link>
+        </div>
+    </script>
+    <script type="text/x-template" id="manageList">
+        <div class="container">
+            <h1>景點管理</h1>
+            <button type="button" class="btn btn-primary mb-2"  data-bs-toggle="modal" data-bs-target="#exampleModa2">新增景點</button>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>景點資料</th>
+                    <th>功能</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(view, i) in views" :key="view.id">
+                    <th scope="row">{{i+1}}</th>
+                    <td>
+                        <div v-if="editId == view.id">
+                            <div class="mb-3">
+                                <label for="editTitle" class="form-label">標題</label>
+                                <input type="text" class="form-control" v-model="editTitle" id="editTitle">
+                              </div>
+                              <div class="mb-3">
+                                <label for="editSubTitle" class="form-label">副標題</label>
+                                <input type="text" class="form-control" v-model="editSubTitle" id="editSubTitle">
+                              </div>
+                              <div class="mb-3">
+                                <label for="editConent" class="form-label">內文</label>
+                                <textarea class="form-control" id="editConent" rows="3" v-model="editConent"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="editImgUrl" class="form-label">圖片網址</label>
+                                <input type="text" class="form-control" v-model="editImgUrl" id="editImgUrl">
+                              </div>
+                        </div>
+                        <div v-else>
+                            <p>標題: {{view.title}}</p>
+                            <p>副標題: {{view.subtitle}}</p>
+                            <p>內文: {{view.constent}}</p>
+                            <p>圖片網址: {{view.imgUrl}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div v-if="editId">
+                            <button type="button" class="btn btn-info mb-2" @click="saveEdit()">儲存</button>
+                            <button type="button" class="btn btn-info" @click="editEmpty()">取消</button>
+                        </div>
+                        <div v-else>
+                            <button type="button" class="btn btn-info mb-2" @click="editThis(view)">編輯</button>
+                            <button type="button" class="btn btn-danger" @click="deletePost(view.id)">刪除</button>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabe2" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                    ref="Close"></button>
+                            </div>
+                            <h5 class="modal-title fs-5 text-center mb-3" id="exampleModalLabe2">新增景點</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="editTitle" class="form-label">標題</label>
+                                    <input type="text" class="form-control" v-model="editTitle" id="editTitle">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="editSubTitle" class="form-label">副標題</label>
+                                    <input type="text" class="form-control" v-model="editSubTitle" id="editSubTitle">
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="editConent" class="form-label">內文</label>
+                                    <textarea class="form-control" id="editConent" rows="3" v-model="editConent"></textarea>
+                                  </div>
+                                  <div class="mb-3">
+                                    <label for="editImgUrl" class="form-label">圖片網址</label>
+                                    <input type="text" class="form-control" v-model="editImgUrl" id="editImgUrl">
+                                  </div>
+                            </form>
+                            <p v-if="NewErr" class="text-center text-danger">{{NewErr}}</p>
+                            <button type="button" class="btn btn-primary" @click="newPost()">新增</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="module">
+
+        // https://router.vuejs.org/guide/
+
+
+        // template 
+        const cardsTemplate = {
+            props: ['data', 'userLogin', 'userLike', 'toggleLike'],
+            template: '#view-card'
+        }
+
+        const homeTemplate = {
+            props: ['views', 'userId', 'userLikeIdList', 'toggleLike', 'routeName'],
+            data() {
+                return {
+                    tii: '',
+                    ii: ['123'],
+                }
+            },
+            components : {cardsTemplate},
+            template: '#home',
+            methods: {
+                goRoute(id) {
+                    this.$router.push(`/detial?id=${id}`)
+                    // this.$router.push(`/like`)
+                }
+            }
+        }
+        
+        const detialpage = {
+            props: ['userLogin',  'userLikeIdList', 'userLike', 'toggleLike', 'apiUrl'],
+            template:'#detialpage',
+            data(){
+                return {
+                    view: {},
+                    devMode: true
+                }
+            },
+            computed:{
+                viewId() {
+                    return this.$route.query.id
+                },
+                // apiUrl() {
+                //     return this.devMode ? 'http://localhost:3000/' : 'https://json-server-try.onrender.com/';
+                // }
+            },
+            mounted() {
+                axios.get(`${this.apiUrl}posts/${this.viewId}`)
+                .then((res) => {
+                    this.view = res.data
+                })
+                // console.log(this.apiUrl)
+            },
+            methods: {
+                strToArr(str) {
+                    return str.split(',');
+                }
+            }
+        }
+         
+        const manageList = {
+            props:['views', 'apiUrl', 'getViews'],
+            data() {
+                return {
+                    editId: '',
+                    editTitle:'',
+                    editSubTitle: '',
+                    editConent:'',
+                    editImgUrl:'',
+                    NewErr:'',
+                }
+            },
+            computed: {
+                postData() {
+                    return {
+                        title: this.editTitle,
+                        subtitle: this.editSubTitle,
+                        constent: this.editConent,
+                        imgUrl: this.editImgUrl,
+                    }
+                }
+            },
+            template: '#manageList',
+            methods: {
+                editThis(view){
+                    this.editId = view.id;
+                    this.editTitle= view.title;
+                    this.editSubTitle=  view.subtitle;
+                    this.editConent= view.constent;
+                    this.editImgUrl= view.imgUrl;
+                },
+                editEmpty(){
+                    this.editId = '';
+                    this.editTitle= '';
+                    this.editSubTitle=  '';
+                    this.editConent= '';
+                    this.editImgUrl= '';
+                },
+                saveEdit(){
+                    if(!this.editTitle || !this.editConent){
+                        alert('標題與內文為必填')
+                        return
+                    }
+                    axios.patch(`${this.apiUrl}posts/${this.editId}`, this.postData)
+                    .then((res) => {
+                        alert('編輯完成')
+                        this.getViews();
+                        this.editEmpty();
+                    })
+                    .catch((err) => {
+                        alert(err.response.data)
+                    })
+                },
+                newPost(){
+                    if(!this.editTitle || !this.editConent){
+                        alert('標題與內文為必填')
+                        return
+                    }
+                    axios.post(`${this.apiUrl}posts`, this.postData)
+                    .then((res) => {
+                        alert('新增完成')
+                        this.getViews();
+                        this.editEmpty();
+                        this.$refs.Close.click();
+                    })
+                    .catch((err) => {
+                        alert(err.response.data)
+                    })
+                },
+                deletePost(id) {
+                    axios.delete(`${this.apiUrl}posts/${id}`)
+                    .then((res) => {
+                        alert('已刪除')
+                        this.getViews();
+                    })
+                    .catch((err) => {
+                        alert(err.response.data)
+                    })
+                }
+            }
+        }
+        const About = {
+            template: '<div>參數問題不用ROUTE</div>'
+        }
+        
+        // router   
+        const routes = [{
+                path: '/',
+                name: 'home',
+                component: homeTemplate,
+                props: true
+            },
+            {
+                path: '/like',
+                name: 'like',
+                component: About
+            },
+            {
+                path: '/manage',
+                name: 'manage',
+                component: About
+            },
+            {
+                path: '/detial',
+                name: 'detial',
+                component: About
+            }
+        ]
+        const router = VueRouter.createRouter({
+            // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+            history: VueRouter.createWebHashHistory(),
+            routes, // short for `routes: routes`
+        })
+
+        const app = Vue.createApp({
+            data() {
+                return {
+                    devMode: false,
+                    email:'',
+                    password: '',
+                    userModeList: window.localStorage.getItem('modeList') ? this.strToArr(window.localStorage.getItem('modeList')) : [],
+                    loginErr: '',
+                    userLikeIdList: window.localStorage.getItem('likeList') ? this.strToArr(window.localStorage.getItem('likeList')) : [],
+                    userId: window.localStorage.getItem('userId') || '',
+                    userName: window.localStorage.getItem('userName') || '',
+                    accessToken: window.localStorage.getItem('accessToken') || '',
+                    viewDetialId:'',
+                    formModeLogin: true, 
+                    newUserName: '',
+                    views: [] // 首頁所有列表, 這個資料不要更動!
+                }
+            },
+            components: {cardsTemplate, homeTemplate, detialpage, manageList},
+            computed: {
+                apiUrl() {
+                    return this.devMode ? 'http://localhost:3000/' : 'https://json-server-try.onrender.com/';
+                },
+                userDate() {
+                    const userDetial = {
+                        token: window.localStorage.getItem('accessToken'),
+                        name: window.localStorage.getItem('userName'),
+                    }
+                    return this.userId ? userDetial : '';
+                },
+                userLikeList() {
+                    const likeItems = this.views.filter(view => this.userLikeIdList.includes(view.id.toString()));
+                    return likeItems;
+                },
+                viewDetialData() {
+                    return this.viewDetialId ? this.views.find((v) => v.id == this.viewDetialId) : {};
+                },
+                routeName() {
+                    return this.$route.name
+                }
+            },
+            created() {
+                // DOM 之前先抓資料
+                this.getViews()
+                // 檢查token過期 
+                const loginDis = window.localStorage.getItem('loginDis')
+                if(Date.now() > Date.parse(loginDis)) {
+                    console.log('loginDis')
+                    this.logout();
+                    this.$router.push('/')
+                }
+            },
+            methods: {
+                getViews() {
+                    axios.get(`${this.apiUrl}posts`)
+                    .then((res) => {
+                        this.views = res.data
+                    })
+                    .catch((err) => {
+                        console.error(err.response)
+                    });
+                },
+                goRoute(id) {
+                    console.log(this.$router)
+                    this.viewDetialId = id;
+                },
+                toggleLike(id) {
+                    const idStr = id.toString()
+                    if (this.userLikeIdList.includes(idStr)) {
+                        const index = this.userLikeIdList.indexOf(idStr);
+                        this.userLikeIdList.splice(index, 1)
+                    } else {
+                        this.userLikeIdList.push(idStr)
+                    }
+                    console.log(this.userLikeIdList, idStr)
+                    axios.patch(`${this.apiUrl}600/users/${this.userId}`,
+                    {
+                        "likePost": this.userLikeIdList
+                    },
+                    {
+                        headers: {
+                            "authorization": `Bearer ${this.accessToken}`
+                        }
+                    }).then((res) => {
+                        console.log(res.data)
+                    }).catch((err) => {
+                        console.log(err.response.data)
+                    })
+                },
+                logout() {
+                    // 清空使用者資料 回首頁
+                    this.resetUserData('', '', '')
+                    this.userModeList.length = 0;
+                    window.localStorage.setItem('modeList', '')
+                    if (this.$route.path !== '/') {
+                        this.$router.push({path: '/'})
+                    }
+                },
+                login() {
+                    if((!this.email || !this.password) || (!this.formModeLogin && !this.newUserName)) {
+                        alert('有欄位未填寫')
+                        return
+                    } 
+                    const path = this.formModeLogin ? 'login' : 'users'
+                    const data = this.formModeLogin ? {
+                        email: this.email,
+                        password: this.password
+                    } : {
+                        email: this.email,
+                        password: this.password,
+                        name: this.newUserName,
+                        likePost: [],
+                        userMode: ['user']
+                    }
+                    axios.post(`${this.apiUrl}${path}`, data)
+                    .then((res) => {
+                        console.log(res.data)
+                        // 設定登入資料
+                        this.resetUserData(res.data.accessToken, res.data.user.id, res.data.user.name)
+                        // 重設收藏+身分                        
+                        window.localStorage.setItem('likeList', res.data.user.likePost)
+                        this.userLikeIdList.length = 0;
+                        res.data.user.likePost.forEach((e) => this.userLikeIdList.push(e))
+                        window.localStorage.setItem('modeList', res.data.user.userMode)
+                        this.userModeList.length = 0;
+                        res.data.user.userMode.forEach((e) => this.userModeList.push(e))
+                        // 設定登入時間與token過期時間
+                        const timeOut = new Date(new Date().getTime() +1*60*60*1000)
+                        window.localStorage.setItem('loginDis', timeOut)
+                        // 回首頁+關閉登入視窗
+                        this.$router.push({path: '/'})
+                        this.$refs.Close.click();
+                    })
+                    .catch((err) => {
+                        console.error(err.response.data)
+                        this.loginErr = err.response.data;
+                    })
+                },
+                resetUserData(accessToken, id, name) {
+                    window.localStorage.setItem('accessToken', accessToken)
+                    window.localStorage.setItem('userId', id)
+                    window.localStorage.setItem('userName', name)
+                    this.userId = id
+                    this.userName = name
+                    this.accessToken = accessToken
+                },
+                modelOpen(){
+                    this.loginErr = '';
+                    this.formModeLogin = true;
+                    // todo: 重設登入資訊
+                },
+                strToArr(str) {
+                    return str.split(',');
+                }
+            },
+        });
+        app.use(router)
+        app.mount('#app')
+    </script>
+</body>
+
+</html>
