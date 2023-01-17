@@ -544,7 +544,12 @@
                         const timeOut = new Date(new Date().getTime() +1*60*60*1000)
                         window.localStorage.setItem('loginDis', timeOut)
                         // 回首頁+關閉登入視窗
-                        this.$router.push({path: '/'})
+                        if( res.data.user.userMode.includes('admin') ){
+                            this.$router.push({path: '/manage'})
+                        } else {
+                            this.$router.push({path: '/'})
+                        }
+                        
                         this.$refs.Close.click();
                     })
                     .catch((err) => {
