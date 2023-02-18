@@ -93,5 +93,35 @@
       "userId": "1",
       "id": 4
     }
+  ],
+  "locations": [
+    {
+      "id": "1",
+      "name": "亞典蛋糕密碼館",
+      "latLng": ["24.781009", "121.731635"]
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "content": "蛋糕非常好吃。",
+      "userId": "3",
+      "locationId": "1",
+      "updateTime": "2023/02/17 10:00"
+    },
+    {
+      "id": "2",
+      "content": "但是服務人員很討厭!!",
+      "userId": "3",
+      "locationId": "1",
+      "updateTime": "2023/02/17 04:20"
+    },
+    {
+      "id": "3",
+      "content": "車子很好停，停車位非常之寬敞。",
+      "userId": "6",
+      "locationId": "1",
+      "updateTime": "2023/02/17 14:01"
+    }
   ]
 }
