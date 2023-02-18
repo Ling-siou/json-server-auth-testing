@@ -120,6 +120,7 @@
     {
       "id": "1",
       "name": "亞典蛋糕密碼館",
+      "countyId": "1",
       "latLng": ["24.781009", "121.731635"],
       "detailId": "1"
     }
@@ -209,5 +210,161 @@
       "msg": "謝謝您的光臨，誠邀您留下報貴的心得分享給大家！",
       "code": "99"
     }
-  ]
+  ],
+  "countys": [
+    {
+        "countycode": "A",
+        "countyname": "臺北市",
+        "countycode01": 63000,
+        "id": 63000,
+        "latLng": [25.0535703,121.5419447]
+    },
+    {
+        "countycode": "B",
+        "countyname": "臺中市",
+        "countycode01": 66000,
+        "id": 66000,
+        "latLng": [24.2204731,120.6756602]
+    },
+    {
+        "countycode": "C",
+        "countyname": "基隆市",
+        "countycode01": 10017,
+        "id": 10017,
+        "latLng": [25.1241862,121.6475822]
+    },
+    {
+        "countycode": "D",
+        "countyname": "臺南市",
+        "countycode01": 67000,
+        "id": 67000,
+        "latLng": [23.0798758,120.2056749]
+    },
+    {
+        "countycode": "E",
+        "countyname": "高雄市",
+        "countycode01": 64000,
+        "id": 64000,
+        "latLng": [22.6996547,120.331088]
+    },
+    {
+        "countycode": "F",
+        "countyname": "新北市",
+        "countycode01": 65000,
+        "id": 65000,
+        "latLng": [24.9871676,121.6447893]
+    },
+    {
+        "countycode": "G",
+        "countyname": "宜蘭縣",
+        "countycode01": 10002,
+        "id": 10002,
+        "latLng": [24.7606048,121.7450098]
+    },
+    {
+        "countycode": "H",
+        "countyname": "桃園市",
+        "countycode01": 68000,
+        "id": 68000,
+        "latLng": [24.9891188,121.3121838]
+    },
+    {
+        "countycode": "I",
+        "countyname": "嘉義市",
+        "countycode01": 10020,
+        "id": 10020,
+        "latLng": [23.4717349,120.4209958]
+    },
+    {
+        "countycode": "J",
+        "countyname": "新竹縣",
+        "countycode01": 10004,
+        "id": 10004,
+        "latLng": [24.834894, 121.021739]
+    },
+    {
+        "countycode": "K",
+        "countyname": "苗栗縣",
+        "countycode01": 10005,
+        "id": 10005,
+        "latLng": [24.565977,120.8194969]
+    },
+    {
+        "countycode": "M",
+        "countyname": "南投縣",
+        "countycode01": 10008,
+        "id": 10008,
+        "latLng": [23.965161, 120.967313]
+    },
+    {
+        "countycode": "N",
+        "countyname": "彰化縣",
+        "countycode01": 10007,
+        "id": 10007,
+        "latLng": [23.960090, 120.480090]
+    },
+    {
+        "countycode": "O",
+        "countyname": "新竹市",
+        "countycode01": 10018,
+        "id": 10018,
+        "latLng": [24.800303, 120.989769]
+    },
+    {
+        "countycode": "P",
+        "countyname": "雲林縣",
+        "countycode01": 10009,
+        "id": 10009,
+        "latLng": [23.708292, 120.431443]
+    },
+    {
+        "countycode": "Q",
+        "countyname": "嘉義縣",
+        "countycode01": 10010,
+        "id": 10010,
+        "latLng": [23.468905, 120.294362]
+    },
+    {
+        "countycode": "T",
+        "countyname": "屏東縣",
+        "countycode01": 10013,
+        "id": 10013,
+        "latLng": [22.550254, 120.536529]
+    },
+    {
+        "countycode": "U",
+        "countyname": "花蓮縣",
+        "countycode01": 10015,
+        "id": 10015,
+        "latLng": [23.993063, 121.602193]
+    },
+    {
+        "countycode": "V",
+        "countyname": "臺東縣",
+        "countycode01": 10014,
+        "id": 10014,
+        "latLng": [22.772134, 121.106187]
+    },
+    {
+        "countycode": "W",
+        "countyname": "金門縣",
+        "countycode01": 9020,
+        "id": 9020,
+        "latLng": [24.446944, 118.377053]
+    },
+    {
+        "countycode": "X",
+        "countyname": "澎湖縣",
+        "countycode01": 10016,
+        "id": 10016,
+        "latLng": [23.5723897,119.5975715]
+    },
+    {
+        "countycode": "Z",
+        "countyname": "連江縣",
+        "countycode01": 9007,
+        "id": 9007,
+        "latLng": [26.1567309,119.9279036]
+    }
+]
 }
