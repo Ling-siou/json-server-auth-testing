@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-test</title>
+</head>
+<body>
+    <script type="module">
+        import { getAverage } from '../js/getAverage.js';
+        const testArr = [
+  {
+    "id": "1",
+    "content": "蛋糕非常好吃。",
+    "userId": "3",
+    "locationId": "1",
+    "updateTime": "2023/02/17 10:00",
+    "starts": "5"
+  },
+  {
+    "id": "2",
+    "content": "但是服務人員很討厭!!",
+    "userId": "3",
+    "locationId": "1",
+    "updateTime": "2023/02/17 04:20",
+    "starts": "3"
+  },
+  {
+    "id": "3",
+    "content": "車子很好停，停車位非常之寬敞。",
+    "userId": "6",
+    "locationId": "1",
+    "updateTime": "2023/02/17 14:01",
+    "starts": "5"
+  }
+]
+
+        const start = getAverage(testArr, 'starts');
+        console.log(start)
+    </script>
+</body>
+</html>
