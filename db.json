@@ -94,7 +94,7 @@
       "data": []
     }
   ],
-  "mainCategorys": [
+  "mainCategories": [
     {
       "id": 1,
       "title": "藝術人文類",
@@ -126,7 +126,7 @@
       "imgUrl": ""
     }
   ],
-  "categorys": [
+  "categories": [
     {
       "id": 1,
       "title": "玻璃工藝",
@@ -467,7 +467,7 @@
       "code": "99"
     }
   ],
-  "countys": [
+  "counties": [
     {
       "countyCode": "A",
       "countyName": "臺北市",
