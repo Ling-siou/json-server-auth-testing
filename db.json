@@ -126,177 +126,176 @@
       "imgUrl": ""
     }
   ],
-  "categorys": 
-  [
+  "categorys": [
     {
-        "id": 1,
-        "title": "玻璃工藝",
-        "mainCategoryId": 1,
-        "content": "高品質的玻璃工藝，經得起時間考驗並展現出優雅美感。"
+      "id": 1,
+      "title": "玻璃工藝",
+      "mainCategoryId": 1,
+      "content": "高品質的玻璃工藝，經得起時間考驗並展現出優雅美感。"
     },
     {
-        "id": 2,
-        "title": "彩繪",
-        "mainCategoryId": 1,
-        "content": "以色彩為媒介，表現出獨特的藝術風格和創意構思。"
+      "id": 2,
+      "title": "彩繪",
+      "mainCategoryId": 1,
+      "content": "以色彩為媒介，表現出獨特的藝術風格和創意構思。"
     },
     {
-        "id": 3,
-        "title": "樂器",
-        "mainCategoryId": 1,
-        "content": "結合了傳統技藝和現代科技，為音樂創作和演奏提供了舞台。"
+      "id": 3,
+      "title": "樂器",
+      "mainCategoryId": 1,
+      "content": "結合了傳統技藝和現代科技，為音樂創作和演奏提供了舞台。"
     },
     {
-        "id": 4,
-        "title": "燈籠",
-        "mainCategoryId": 1,
-        "content": "一門傳統的工藝藝術，展現出多元的設計風格和文化意涵。"
+      "id": 4,
+      "title": "燈籠",
+      "mainCategoryId": 1,
+      "content": "一門傳統的工藝藝術，展現出多元的設計風格和文化意涵。"
     },
     {
-        "id": 5,
-        "title": "印刷",
-        "mainCategoryId": 1,
-        "content": "結合創意與科技，透過印刷技術為人們帶來獨特的視覺體驗。"
+      "id": 5,
+      "title": "印刷",
+      "mainCategoryId": 1,
+      "content": "結合創意與科技，透過印刷技術為人們帶來獨特的視覺體驗。"
     },
     {
-        "id": 6,
-        "title": "金屬工藝",
-        "mainCategoryId": 1,
-        "content": "融合傳統工藝與現代科技的技術藝術，呈現出金屬的美感和實用價值。"
+      "id": 6,
+      "title": "金屬工藝",
+      "mainCategoryId": 1,
+      "content": "融合傳統工藝與現代科技的技術藝術，呈現出金屬的美感和實用價值。"
     },
     {
-        "id": 7,
-        "title": "陶藝",
-        "mainCategoryId": 1,
-        "content": "以泥土塑造出無限可能的形狀和紋理，展現人文與自然的交互關係。"
+      "id": 7,
+      "title": "陶藝",
+      "mainCategoryId": 1,
+      "content": "以泥土塑造出無限可能的形狀和紋理，展現人文與自然的交互關係。"
     },
     {
-        "id": 8,
-        "title": "紙藝",
-        "mainCategoryId": 1,
-        "content": "利用紙張的柔韌性和可塑性，呈現出紙張的美感和生命力。"
+      "id": 8,
+      "title": "紙藝",
+      "mainCategoryId": 1,
+      "content": "利用紙張的柔韌性和可塑性，呈現出紙張的美感和生命力。"
     },
     {
-        "id": 9,
-        "title": "文具",
-        "mainCategoryId": 1,
-        "content": "提供便利的辦公用品、書寫工具，助力人們創造、學習和表達。"
+      "id": 9,
+      "title": "文具",
+      "mainCategoryId": 1,
+      "content": "提供便利的辦公用品、書寫工具，助力人們創造、學習和表達。"
     },
     {
-        "id": 10,
-        "title": "生技",
-        "mainCategoryId": 2,
-        "content": "結合生物科技、工程和資訊等專業，為人們身心健康和生命保駕護航。"
+      "id": 10,
+      "title": "生技",
+      "mainCategoryId": 2,
+      "content": "結合生物科技、工程和資訊等專業，為人們身心健康和生命保駕護航。"
     },
     {
-        "id": 11,
-        "title": "養生",
-        "mainCategoryId": 2,
-        "content": "隨著健康意識抬頭，台灣積極研發各種養生食品，提供身體所需的營養素。"
+      "id": 11,
+      "title": "養生",
+      "mainCategoryId": 2,
+      "content": "隨著健康意識抬頭，台灣積極研發各種養生食品，提供身體所需的營養素。"
     },
     {
-        "id": 12,
-        "title": "美妝",
-        "mainCategoryId": 2,
-        "content": "讓人改變外表形象、增強自信，高品質的美妝產品，台灣就有了喔！"
+      "id": 12,
+      "title": "美妝",
+      "mainCategoryId": 2,
+      "content": "讓人改變外表形象、增強自信，高品質的美妝產品，台灣就有了喔！"
     },
     {
-        "id": 13,
-        "title": "糕餅",
-        "mainCategoryId": 3,
-        "content": "咬一口，甜蜜滿滿。來參觀製成，更能安心滿滿喔！"
+      "id": 13,
+      "title": "糕餅",
+      "mainCategoryId": 3,
+      "content": "咬一口，甜蜜滿滿。來參觀製成，更能安心滿滿喔！"
     },
     {
-        "id": 14,
-        "title": "酒廠",
-        "mainCategoryId": 3,
-        "content": "台灣酒業歷史悠長，不僅體現了風土人情，更時時豐富我們的文化生活。"
+      "id": 14,
+      "title": "酒廠",
+      "mainCategoryId": 3,
+      "content": "台灣酒業歷史悠長，不僅體現了風土人情，更時時豐富我們的文化生活。"
     },
     {
-        "id": 15,
-        "title": "茶",
-        "mainCategoryId": 3,
-        "content": "來參觀從採茶、製茶、包裝到品茗的製茶過程，也認識在地的茶飲文化。"
+      "id": 15,
+      "title": "茶",
+      "mainCategoryId": 3,
+      "content": "來參觀從採茶、製茶、包裝到品茗的製茶過程，也認識在地的茶飲文化。"
     },
     {
-        "id": 16,
-        "title": "漁產",
-        "mainCategoryId": 3,
-        "content": "漁產業與地方文化有密切關聯，來品嘗美味並認識台灣漁業的故事吧！"
+      "id": 16,
+      "title": "漁產",
+      "mainCategoryId": 3,
+      "content": "漁產業與地方文化有密切關聯，來品嘗美味並認識台灣漁業的故事吧！"
     },
     {
-        "id": 17,
-        "title": "衣飾",
-        "mainCategoryId": 4,
-        "content": "台灣曾有紡織王國的美稱，至今依有許多高品質的產出，快來一探究竟。"
+      "id": 17,
+      "title": "衣飾",
+      "mainCategoryId": 4,
+      "content": "台灣曾有紡織王國的美稱，至今依有許多高品質的產出，快來一探究竟。"
     },
     {
-        "id": 18,
-        "title": "建材",
-        "mainCategoryId": 4,
-        "content": ""
+      "id": 18,
+      "title": "建材",
+      "mainCategoryId": 4,
+      "content": ""
     },
     {
-        "id": 19,
-        "title": "衛生用品",
-        "mainCategoryId": 4,
-        "content": "有效地保護身體健康，避免疾病的傳播和感染，提升生活品質。"
+      "id": 19,
+      "title": "衛生用品",
+      "mainCategoryId": 4,
+      "content": "有效地保護身體健康，避免疾病的傳播和感染，提升生活品質。"
     },
     {
-        "id": 20,
-        "title": "生活用品",
-        "mainCategoryId": 4,
-        "content": "提供越來越好的使用體驗，提升舒適感和滿意度，快來了解不斷進步的過程。"
+      "id": 20,
+      "title": "生活用品",
+      "mainCategoryId": 4,
+      "content": "提供越來越好的使用體驗，提升舒適感和滿意度，快來了解不斷進步的過程。"
     },
     {
-        "id": 21,
-        "title": "寢具",
-        "mainCategoryId": 4,
-        "content": "提供我們舒適的睡眠環境，促進睡眠品質，這麼好的寢具台灣就有了~"
+      "id": 21,
+      "title": "寢具",
+      "mainCategoryId": 4,
+      "content": "提供我們舒適的睡眠環境，促進睡眠品質，這麼好的寢具台灣就有了~"
     },
     {
-        "id": 22,
-        "title": "衛浴",
-        "mainCategoryId": 4,
-        "content": ""
+      "id": 22,
+      "title": "衛浴",
+      "mainCategoryId": 4,
+      "content": ""
     },
     {
-        "id": 23,
-        "title": "戶外休閒用品",
-        "mainCategoryId": 4,
-        "content": "好品質的產品讓我們能更輕鬆舒適地享受大自然，提升身心健康和生活品質。"
+      "id": 23,
+      "title": "戶外休閒用品",
+      "mainCategoryId": 4,
+      "content": "好品質的產品讓我們能更輕鬆舒適地享受大自然，提升身心健康和生活品質。"
     },
     {
-        "id": 24,
-        "title": "油",
-        "mainCategoryId": 5,
-        "content": "好的油可以提高食物的味道和營養價值，快來看看台灣優質油品的製造過程。"
+      "id": 24,
+      "title": "油",
+      "mainCategoryId": 5,
+      "content": "好的油可以提高食物的味道和營養價值，快來看看台灣優質油品的製造過程。"
     },
     {
-        "id": 25,
-        "title": "鹽",
-        "mainCategoryId": 5,
-        "content": "鹽是人類生活中不可或缺的基本物質之一，快來認識台灣的鹽產業的發展。"
+      "id": 25,
+      "title": "鹽",
+      "mainCategoryId": 5,
+      "content": "鹽是人類生活中不可或缺的基本物質之一，快來認識台灣的鹽產業的發展。"
     },
     {
-        "id": 26,
-        "title": "醬",
-        "mainCategoryId": 5,
-        "content": "醬料是飲食中不可或缺的調味品，工廠們用嚴格的品管與創新的研發豐富大家的味蕾。"
+      "id": 26,
+      "title": "醬",
+      "mainCategoryId": 5,
+      "content": "醬料是飲食中不可或缺的調味品，工廠們用嚴格的品管與創新的研發豐富大家的味蕾。"
     },
     {
-        "id": 27,
-        "title": "木質生活",
-        "mainCategoryId": 4,
-        "content": "木頭的天然紋理和質地帶來溫暖舒適的氛圍，是傳統工藝與現代設計相結合的完美體現。"
+      "id": 27,
+      "title": "木質生活",
+      "mainCategoryId": 4,
+      "content": "木頭的天然紋理和質地帶來溫暖舒適的氛圍，是傳統工藝與現代設計相結合的完美體現。"
     },
     {
-        "id": 28,
-        "title": "米",
-        "mainCategoryId": 5,
-        "content": "米是台灣人的主食、也能製作出各種不同的點心，而台灣盛產各種好米，等你來細細品味。"
+      "id": 28,
+      "title": "米",
+      "mainCategoryId": 5,
+      "content": "米是台灣人的主食、也能製作出各種不同的點心，而台灣盛產各種好米，等你來細細品味。"
     }
-],
+  ],
   "locations": [
     {
       "id": "1",
@@ -321,6 +320,18 @@
         "121.736927"
       ],
       "detailId": "2"
+    },
+    {
+      "name": "一米特米食點心觀光工廠",
+      "mainCategoryId": 3,
+      "categoryId": 13,
+      "countyId": "10002",
+      "latLng": [
+        "24.6151",
+        "121.8309"
+      ],
+      "detailId": "3",
+      "id": "xQMwnnG"
     }
   ],
   "details": [
@@ -348,6 +359,30 @@
       "tel": "03-9905999",
       "address": "宜蘭縣宜蘭市梅洲二路122號",
       "traffic": "蘇澳新站下車後，往馬賽方向步行約15分鐘。",
+      "imageUrl": "",
+      "moreImages": [
+        {
+          "url": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "一米特米食點心觀光工廠",
+      "contentShort": "讓位於蘇澳，矗立在一片青山綠野中，占地將近五千坪的「一米特米食點心觀光工廠」，成為一個擁有美食、人文、休閒、景觀的全方位休閒園區。",
+      "content": "人稱阿茂的一米特創辦人吳永茂，擁有超過三十年糕餅、點心製作經驗，創立浩漢集團，成為全台麻糬原料代工龍頭，隨著台灣人越來越重視食品安全問題及休閒旅遊品質，阿茂決定返鄉創建「一米特米食點心觀光工廠」，用父親留下來的土地和自己三十多年來專業研發點心糕餅的技術，讓位於蘇澳，矗立在一片青山綠野中，占地將近五千坪的「一米特米食點心觀光工廠」，成為一個擁有美食、人文、休閒、景觀的全方位休閒園區。也因感念米帶給自己的恩惠，及承襲父親對米的情感，每一粒米對阿茂來說都特別重要，在製程上遵循古法製作融合現代精髓，提升製造品質，引進日本技術，讓平凡的每一粒米，展現簡單卻富有內涵的特色，因此就地新創品牌取名「一米特」，讓每一口都獨特。",
+      "tel": "03-9907779#500",
+      "address": "宜蘭縣蘇澳鎮祥和路199號",
+      "traffic": {
+        "public": [
+          "客運/台北搭客運至羅東轉運站，再轉公車241號至文化國中站下車後，步行約5分鐘。",
+          "火車/搭車至蘇澳新站下車，步行約15分鐘。"
+        ],
+        "private": [
+          "國道五號蘇澳交流道下，直走至祥義路左轉，再前行300公尺後，即可抵達。"
+        ]
+      },
       "imageUrl": "",
       "moreImages": [
         {
