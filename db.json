@@ -52,48 +52,280 @@
   ],
   "likeLists": [
     {
-      "id":"1",
-      "userId":"1",
-      "data": ["2","3"]
+      "id": "1",
+      "userId": "1",
+      "data": [
+        "2",
+        "3"
+      ]
     },
     {
-      "id":"2",
-      "userId":"2",
+      "id": "2",
+      "userId": "2",
       "data": []
     },
     {
-      "id":"3",
-      "userId":"3",
-      "data": ["2","3"]
+      "id": "3",
+      "userId": "3",
+      "data": [
+        "2",
+        "3"
+      ]
     },
     {
-      "id":"4",
-      "userId":"4",
-      "data": ["2","3"]
+      "id": "4",
+      "userId": "4",
+      "data": [
+        "2",
+        "3"
+      ]
     },
     {
-      "id":"5",
-      "userId":"5",
-      "data": ["2","3"]
+      "id": "5",
+      "userId": "5",
+      "data": [
+        "2",
+        "3"
+      ]
     },
     {
-      "id":"6",
-      "userId":"6",
-      "data": ["2","3"]
+      "id": "6",
+      "userId": "6",
+      "data": []
     }
   ],
+  "mainCategorys": [
+    {
+      "id": 1,
+      "title": "藝術人文類",
+      "content": "涵蓋了視覺、文學、設計、傳媒等領域，台灣的藝術文化產業豐富了社會文化多元性，也讓世界看見台灣。",
+      "imgUrl": ""
+    },
+    {
+      "id": 2,
+      "title": "生物科技類",
+      "content": "運用生物技術和工程技術，研發生產具有醫療、農業、環保和美妝等應用價值的產品，是當代高科技產業的重要組成部分。",
+      "imgUrl": ""
+    },
+    {
+      "id": 3,
+      "title": "美酒美食類",
+      "content": "觀賞釀酒和製作美食不僅能夠體驗到獨特的工藝技術和文化魅力，還能讓人感受到創造的樂趣和挑戰，為生活注入愉悅和滿足感。",
+      "imgUrl": ""
+    },
+    {
+      "id": 4,
+      "title": "民生用品類",
+      "content": "工廠都有著優良的生產技術、品管機制和用心的服務，並且能夠滿足消費者對品質和安全的要求。邀您來聽各種台灣精品的故事。",
+      "imgUrl": ""
+    },
+    {
+      "id": 5,
+      "title": "米與調味品",
+      "content": "好米和調味料是鑄造台灣為美食王國的重要基礎，也讓煮婦煮夫們烹調出的菜餚更加美味可口，滿足我們對於飲食和健康的需求",
+      "imgUrl": ""
+    }
+  ],
+  "categorys": 
+  [
+    {
+        "id": 1,
+        "title": "玻璃工藝",
+        "mainCategoryId": 1,
+        "content": "高品質的玻璃工藝，經得起時間考驗並展現出優雅美感。"
+    },
+    {
+        "id": 2,
+        "title": "彩繪",
+        "mainCategoryId": 1,
+        "content": "以色彩為媒介，表現出獨特的藝術風格和創意構思。"
+    },
+    {
+        "id": 3,
+        "title": "樂器",
+        "mainCategoryId": 1,
+        "content": "結合了傳統技藝和現代科技，為音樂創作和演奏提供了舞台。"
+    },
+    {
+        "id": 4,
+        "title": "燈籠",
+        "mainCategoryId": 1,
+        "content": "一門傳統的工藝藝術，展現出多元的設計風格和文化意涵。"
+    },
+    {
+        "id": 5,
+        "title": "印刷",
+        "mainCategoryId": 1,
+        "content": "結合創意與科技，透過印刷技術為人們帶來獨特的視覺體驗。"
+    },
+    {
+        "id": 6,
+        "title": "金屬工藝",
+        "mainCategoryId": 1,
+        "content": "融合傳統工藝與現代科技的技術藝術，呈現出金屬的美感和實用價值。"
+    },
+    {
+        "id": 7,
+        "title": "陶藝",
+        "mainCategoryId": 1,
+        "content": "以泥土塑造出無限可能的形狀和紋理，展現人文與自然的交互關係。"
+    },
+    {
+        "id": 8,
+        "title": "紙藝",
+        "mainCategoryId": 1,
+        "content": "利用紙張的柔韌性和可塑性，呈現出紙張的美感和生命力。"
+    },
+    {
+        "id": 9,
+        "title": "文具",
+        "mainCategoryId": 1,
+        "content": "提供便利的辦公用品、書寫工具，助力人們創造、學習和表達。"
+    },
+    {
+        "id": 10,
+        "title": "生技",
+        "mainCategoryId": 2,
+        "content": "結合生物科技、工程和資訊等專業，為人們身心健康和生命保駕護航。"
+    },
+    {
+        "id": 11,
+        "title": "養生",
+        "mainCategoryId": 2,
+        "content": "隨著健康意識抬頭，台灣積極研發各種養生食品，提供身體所需的營養素。"
+    },
+    {
+        "id": 12,
+        "title": "美妝",
+        "mainCategoryId": 2,
+        "content": "讓人改變外表形象、增強自信，高品質的美妝產品，台灣就有了喔！"
+    },
+    {
+        "id": 13,
+        "title": "糕餅",
+        "mainCategoryId": 3,
+        "content": "咬一口，甜蜜滿滿。來參觀製成，更能安心滿滿喔！"
+    },
+    {
+        "id": 14,
+        "title": "酒廠",
+        "mainCategoryId": 3,
+        "content": "台灣酒業歷史悠長，不僅體現了風土人情，更時時豐富我們的文化生活。"
+    },
+    {
+        "id": 15,
+        "title": "茶",
+        "mainCategoryId": 3,
+        "content": "來參觀從採茶、製茶、包裝到品茗的製茶過程，也認識在地的茶飲文化。"
+    },
+    {
+        "id": 16,
+        "title": "漁產",
+        "mainCategoryId": 3,
+        "content": "漁產業與地方文化有密切關聯，來品嘗美味並認識台灣漁業的故事吧！"
+    },
+    {
+        "id": 17,
+        "title": "衣飾",
+        "mainCategoryId": 4,
+        "content": "台灣曾有紡織王國的美稱，至今依有許多高品質的產出，快來一探究竟。"
+    },
+    {
+        "id": 18,
+        "title": "建材",
+        "mainCategoryId": 4,
+        "content": ""
+    },
+    {
+        "id": 19,
+        "title": "衛生用品",
+        "mainCategoryId": 4,
+        "content": "有效地保護身體健康，避免疾病的傳播和感染，提升生活品質。"
+    },
+    {
+        "id": 20,
+        "title": "生活用品",
+        "mainCategoryId": 4,
+        "content": "提供越來越好的使用體驗，提升舒適感和滿意度，快來了解不斷進步的過程。"
+    },
+    {
+        "id": 21,
+        "title": "寢具",
+        "mainCategoryId": 4,
+        "content": "提供我們舒適的睡眠環境，促進睡眠品質，這麼好的寢具台灣就有了~"
+    },
+    {
+        "id": 22,
+        "title": "衛浴",
+        "mainCategoryId": 4,
+        "content": ""
+    },
+    {
+        "id": 23,
+        "title": "戶外休閒用品",
+        "mainCategoryId": 4,
+        "content": "好品質的產品讓我們能更輕鬆舒適地享受大自然，提升身心健康和生活品質。"
+    },
+    {
+        "id": 24,
+        "title": "油",
+        "mainCategoryId": 5,
+        "content": "好的油可以提高食物的味道和營養價值，快來看看台灣優質油品的製造過程。"
+    },
+    {
+        "id": 25,
+        "title": "鹽",
+        "mainCategoryId": 5,
+        "content": "鹽是人類生活中不可或缺的基本物質之一，快來認識台灣的鹽產業的發展。"
+    },
+    {
+        "id": 26,
+        "title": "醬",
+        "mainCategoryId": 5,
+        "content": "醬料是飲食中不可或缺的調味品，工廠們用嚴格的品管與創新的研發豐富大家的味蕾。"
+    },
+    {
+        "id": 27,
+        "title": "木質生活",
+        "mainCategoryId": 4,
+        "content": "木頭的天然紋理和質地帶來溫暖舒適的氛圍，是傳統工藝與現代設計相結合的完美體現。"
+    },
+    {
+        "id": 28,
+        "title": "米",
+        "mainCategoryId": 5,
+        "content": "米是台灣人的主食、也能製作出各種不同的點心，而台灣盛產各種好米，等你來細細品味。"
+    }
+],
   "locations": [
     {
       "id": "1",
       "name": "亞典蛋糕密碼館",
+      "mainCategoryId": 3,
+      "categoryId": 13,
       "countyId": "1",
-      "latLng": ["24.781009", "121.731635"],
+      "latLng": [
+        "24.781009",
+        "121.731635"
+      ],
       "detailId": "1"
+    },
+    {
+      "id": "2",
+      "name": "宜蘭餅發明館",
+      "mainCategoryId": 3,
+      "categoryId": 13,
+      "countyId": "10002",
+      "latLng": [
+        "24.779943",
+        "121.736927"
+      ],
+      "detailId": "2"
     }
   ],
   "details": [
     {
-      "id":"1",
+      "id": "1",
       "name": "亞典蛋糕密碼館",
       "contentShort": "亞典菓子工廠於2007年配合宜蘭縣政府觀光工廠政策，返鄉於宜蘭市梅洲工業區成立「亞典蛋糕密碼館」觀光工廠。為想進一步將優質產品推廣給更多消費者，亞典菓子工廠於宜蘭市梅洲二路122號成立「亞典蛋糕密碼館」觀光工廠，已於2010年七月開始試營運，期盼讓每個消費者直接感受亞典美味可口的烘焙製品。",
       "content": "亞典菓子工廠於2007年配合宜蘭縣政府觀光工廠政策，返鄉於宜蘭市梅洲工業區成立「亞典蛋糕密碼館」觀光工廠。為想進一步將優質產品推廣給更多消費者，亞典菓子工廠於宜蘭市梅洲二路122號成立「亞典蛋糕密碼館」觀光工廠，已於2010年七月開始試營運，期盼讓每個消費者直接感受亞典美味可口的烘焙製品。\n\n「亞典菓子工廠」是國內投入先進自動化設備及「無塵室」作業廠房的專業蛋糕工廠，所有蛋糕全部在最衛生的『無塵室』生產包裝，廠房內採用無塵式隔間，空氣經過過濾才流入生產線，從麵糊的攪拌到烘焙出爐一貫化條件生產，讓蛋糕品質從第一條到第五千條保持最佳狀態，全程符合超高衛生標準既安全的品質控管；所有產品以高級原料製成，不添加防腐劑，為了防止空氣中灰塵細菌沾黏，也以最先進的真空充氮包裝機及『 科技無氧包裝 』把新鮮、香味包起來。\n\n亞典菓子工廠於宜蘭所成立的「亞典蛋糕密碼館」，用心紀錄著美味蛋糕一步一步的誕生過程。在這裡您可以看見我們「以幸福為圓心，甜蜜為半徑」用心所製作出的蛋糕。若您在尋找記憶裡香甜的味道，亞典菓子工廠衷心邀請您與我們肩並肩地共話家常，用歡笑和喜悅共享這繽紛甜蜜的世界。亞典菓子工廠歡迎您的到來！",
@@ -103,7 +335,23 @@
       "imageUrl": "",
       "moreImages": [
         {
-          "url":"",
+          "url": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "宜蘭餅發明館",
+      "contentShort": "宜蘭餅發明館位於宜蘭到花蓮蔣謂水高速公路最後一個交流道，到花蓮去或是回來一定會經過發明館，佔地1600坪，適合大小團體，一定過來體驗發明館的魅力。",
+      "content": "宜蘭餅發明館位於宜蘭到花蓮蔣謂水高速公路最後一個交流道，到花蓮去或是回來一定會經過發明館，佔地1600坪，適合大小團體，一定過來體驗發明館的魅力。",
+      "tel": "03-9905999",
+      "address": "宜蘭縣宜蘭市梅洲二路122號",
+      "traffic": "蘇澳新站下車後，往馬賽方向步行約15分鐘。",
+      "imageUrl": "",
+      "moreImages": [
+        {
+          "url": "",
           "alt": ""
         }
       ]
@@ -135,9 +383,9 @@
       "starts": "5"
     }
   ],
-  "orders":[
+  "orders": [
     {
-      "id":"1",
+      "id": "1",
       "userId": "6",
       "stateCode": "99",
       "locationId": "1",
@@ -186,158 +434,224 @@
   ],
   "countys": [
     {
-        "countyCode": "A",
-        "countyName": "臺北市",
-        "countyCode01": 63000,
-        "id": 63000,
-        "latLng": [25.0535703,121.5419447]
+      "countyCode": "A",
+      "countyName": "臺北市",
+      "countyCode01": 63000,
+      "id": 63000,
+      "latLng": [
+        25.0535703,
+        121.5419447
+      ]
     },
     {
-        "countyCode": "B",
-        "countyName": "臺中市",
-        "countyCode01": 66000,
-        "id": 66000,
-        "latLng": [24.2204731,120.6756602]
+      "countyCode": "B",
+      "countyName": "臺中市",
+      "countyCode01": 66000,
+      "id": 66000,
+      "latLng": [
+        24.2204731,
+        120.6756602
+      ]
     },
     {
-        "countyCode": "C",
-        "countyName": "基隆市",
-        "countyCode01": 10017,
-        "id": 10017,
-        "latLng": [25.1241862,121.6475822]
+      "countyCode": "C",
+      "countyName": "基隆市",
+      "countyCode01": 10017,
+      "id": 10017,
+      "latLng": [
+        25.1241862,
+        121.6475822
+      ]
     },
     {
-        "countyCode": "D",
-        "countyName": "臺南市",
-        "countyCode01": 67000,
-        "id": 67000,
-        "latLng": [23.0798758,120.2056749]
+      "countyCode": "D",
+      "countyName": "臺南市",
+      "countyCode01": 67000,
+      "id": 67000,
+      "latLng": [
+        23.0798758,
+        120.2056749
+      ]
     },
     {
-        "countyCode": "E",
-        "countyName": "高雄市",
-        "countyCode01": 64000,
-        "id": 64000,
-        "latLng": [22.6996547,120.331088]
+      "countyCode": "E",
+      "countyName": "高雄市",
+      "countyCode01": 64000,
+      "id": 64000,
+      "latLng": [
+        22.6996547,
+        120.331088
+      ]
     },
     {
-        "countyCode": "F",
-        "countyName": "新北市",
-        "countyCode01": 65000,
-        "id": 65000,
-        "latLng": [24.9871676,121.6447893]
+      "countyCode": "F",
+      "countyName": "新北市",
+      "countyCode01": 65000,
+      "id": 65000,
+      "latLng": [
+        24.9871676,
+        121.6447893
+      ]
     },
     {
-        "countyCode": "G",
-        "countyName": "宜蘭縣",
-        "countyCode01": 10002,
-        "id": 10002,
-        "latLng": [24.7606048,121.7450098]
+      "countyCode": "G",
+      "countyName": "宜蘭縣",
+      "countyCode01": 10002,
+      "id": 10002,
+      "latLng": [
+        24.7606048,
+        121.7450098
+      ]
     },
     {
-        "countyCode": "H",
-        "countyName": "桃園市",
-        "countyCode01": 68000,
-        "id": 68000,
-        "latLng": [24.9891188,121.3121838]
+      "countyCode": "H",
+      "countyName": "桃園市",
+      "countyCode01": 68000,
+      "id": 68000,
+      "latLng": [
+        24.9891188,
+        121.3121838
+      ]
     },
     {
-        "countyCode": "I",
-        "countyName": "嘉義市",
-        "countyCode01": 10020,
-        "id": 10020,
-        "latLng": [23.4717349,120.4209958]
+      "countyCode": "I",
+      "countyName": "嘉義市",
+      "countyCode01": 10020,
+      "id": 10020,
+      "latLng": [
+        23.4717349,
+        120.4209958
+      ]
     },
     {
-        "countyCode": "J",
-        "countyName": "新竹縣",
-        "countyCode01": 10004,
-        "id": 10004,
-        "latLng": [24.834894, 121.021739]
+      "countyCode": "J",
+      "countyName": "新竹縣",
+      "countyCode01": 10004,
+      "id": 10004,
+      "latLng": [
+        24.834894,
+        121.021739
+      ]
     },
     {
-        "countyCode": "K",
-        "countyName": "苗栗縣",
-        "countyCode01": 10005,
-        "id": 10005,
-        "latLng": [24.565977,120.8194969]
+      "countyCode": "K",
+      "countyName": "苗栗縣",
+      "countyCode01": 10005,
+      "id": 10005,
+      "latLng": [
+        24.565977,
+        120.8194969
+      ]
     },
     {
-        "countyCode": "M",
-        "countyName": "南投縣",
-        "countyCode01": 10008,
-        "id": 10008,
-        "latLng": [23.965161, 120.967313]
+      "countyCode": "M",
+      "countyName": "南投縣",
+      "countyCode01": 10008,
+      "id": 10008,
+      "latLng": [
+        23.965161,
+        120.967313
+      ]
     },
     {
-        "countyCode": "N",
-        "countyName": "彰化縣",
-        "countyCode01": 10007,
-        "id": 10007,
-        "latLng": [23.960090, 120.480090]
+      "countyCode": "N",
+      "countyName": "彰化縣",
+      "countyCode01": 10007,
+      "id": 10007,
+      "latLng": [
+        23.96009,
+        120.48009
+      ]
     },
     {
-        "countyCode": "O",
-        "countyName": "新竹市",
-        "countyCode01": 10018,
-        "id": 10018,
-        "latLng": [24.800303, 120.989769]
+      "countyCode": "O",
+      "countyName": "新竹市",
+      "countyCode01": 10018,
+      "id": 10018,
+      "latLng": [
+        24.800303,
+        120.989769
+      ]
     },
     {
-        "countyCode": "P",
-        "countyName": "雲林縣",
-        "countyCode01": 10009,
-        "id": 10009,
-        "latLng": [23.708292, 120.431443]
+      "countyCode": "P",
+      "countyName": "雲林縣",
+      "countyCode01": 10009,
+      "id": 10009,
+      "latLng": [
+        23.708292,
+        120.431443
+      ]
     },
     {
-        "countyCode": "Q",
-        "countyName": "嘉義縣",
-        "countyCode01": 10010,
-        "id": 10010,
-        "latLng": [23.468905, 120.294362]
+      "countyCode": "Q",
+      "countyName": "嘉義縣",
+      "countyCode01": 10010,
+      "id": 10010,
+      "latLng": [
+        23.468905,
+        120.294362
+      ]
     },
     {
-        "countyCode": "T",
-        "countyName": "屏東縣",
-        "countyCode01": 10013,
-        "id": 10013,
-        "latLng": [22.550254, 120.536529]
+      "countyCode": "T",
+      "countyName": "屏東縣",
+      "countyCode01": 10013,
+      "id": 10013,
+      "latLng": [
+        22.550254,
+        120.536529
+      ]
     },
     {
-        "countyCode": "U",
-        "countyName": "花蓮縣",
-        "countyCode01": 10015,
-        "id": 10015,
-        "latLng": [23.993063, 121.602193]
+      "countyCode": "U",
+      "countyName": "花蓮縣",
+      "countyCode01": 10015,
+      "id": 10015,
+      "latLng": [
+        23.993063,
+        121.602193
+      ]
     },
     {
-        "countyCode": "V",
-        "countyName": "臺東縣",
-        "countyCode01": 10014,
-        "id": 10014,
-        "latLng": [22.772134, 121.106187]
+      "countyCode": "V",
+      "countyName": "臺東縣",
+      "countyCode01": 10014,
+      "id": 10014,
+      "latLng": [
+        22.772134,
+        121.106187
+      ]
     },
     {
-        "countyCode": "W",
-        "countyName": "金門縣",
-        "countyCode01": 9020,
-        "id": 9020,
-        "latLng": [24.446944, 118.377053]
+      "countyCode": "W",
+      "countyName": "金門縣",
+      "countyCode01": 9020,
+      "id": 9020,
+      "latLng": [
+        24.446944,
+        118.377053
+      ]
     },
     {
-        "countyCode": "X",
-        "countyName": "澎湖縣",
-        "countyCode01": 10016,
-        "id": 10016,
-        "latLng": [23.5723897,119.5975715]
+      "countyCode": "X",
+      "countyName": "澎湖縣",
+      "countyCode01": 10016,
+      "id": 10016,
+      "latLng": [
+        23.5723897,
+        119.5975715
+      ]
     },
     {
-        "countyCode": "Z",
-        "countyName": "連江縣",
-        "countyCode01": 9007,
-        "id": 9007,
-        "latLng": [26.1567309,119.9279036]
+      "countyCode": "Z",
+      "countyName": "連江縣",
+      "countyCode01": 9007,
+      "id": 9007,
+      "latLng": [
+        26.1567309,
+        119.9279036
+      ]
     }
-]
+  ]
 }
